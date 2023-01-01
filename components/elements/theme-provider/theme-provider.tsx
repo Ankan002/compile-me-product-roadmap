@@ -16,7 +16,7 @@ const ThemeProvider = (props: Props) => {
     const isMounted = useRef(false);
 
     useEffect(() => {
-        if (typeof window === undefined) return;
+        if (window === undefined) return;
         if (isMounted.current) return;
 
         isMounted.current = true;
@@ -24,6 +24,7 @@ const ThemeProvider = (props: Props) => {
 
         if (!lastSavedMode) {
             localStorage.setItem("theme", currentTheme);
+            return;
         }
 
         if (lastSavedMode === "dark") {
