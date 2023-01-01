@@ -1,10 +1,11 @@
 import { ThemeToggleBtn } from "components";
 import { Header } from "components/elements";
 import { getProgressData } from "helpers";
+import { Feature } from "types/feature";
 
 export default async function Home() {
     const progressDataResponse = await getProgressData();
-    const featuresProgressData = progressDataResponse.data;
+    const featuresProgressData = progressDataResponse.data as Array<Feature>;
 
     console.log(featuresProgressData);
     return (
