@@ -1,9 +1,12 @@
 import { ThemeToggleBtn } from "components";
 import { Header } from "components/elements";
-import { getProgressData } from "helpers/get-progress-data";
+import { getProgressData } from "helpers";
 
-export default function Home() {
+export default async function Home() {
+    const progressDataResponse = await getProgressData();
+    const featuresProgressData = progressDataResponse.data;
 
+    console.log(featuresProgressData);
     return (
         <main className="min-h-screen w-full bg-primaryLight dark:bg-primaryDark flex flex-col px-5 py-3">
             <Header title="Product Roadmap" />
@@ -13,4 +16,4 @@ export default function Home() {
     );
 }
 
-export const revalidate = 28800
+export const revalidate = 28800;
