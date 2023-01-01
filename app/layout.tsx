@@ -1,5 +1,7 @@
 import "./globals.css";
 import { RecoilContext, ThemeProvider } from "components/elements";
+import { ThemeToggleBtn } from "components";
+import "react-vertical-timeline-component/style.min.css";
 
 export default function RootLayout({
     children,
@@ -11,7 +13,10 @@ export default function RootLayout({
             <head />
             <body>
                 <RecoilContext>
-                    <ThemeProvider>{children}</ThemeProvider>
+                    <ThemeProvider>
+                        {children}
+                        <ThemeToggleBtn />
+                    </ThemeProvider>
                 </RecoilContext>
             </body>
         </html>
