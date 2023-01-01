@@ -27,7 +27,7 @@ const ThemeProvider = (props: Props) => {
             return;
         }
 
-        if (lastSavedMode === "dark") {
+        if (lastSavedMode === "light") {
             setCurrentTheme(lastSavedMode);
         }
     }, []);
