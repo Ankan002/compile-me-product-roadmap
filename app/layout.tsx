@@ -1,5 +1,5 @@
 import "./globals.css";
-import { RecoilContext } from "components/elements";
+import { RecoilContext, ThemeProvider } from "components/elements";
 
 export default function RootLayout({
     children,
@@ -10,7 +10,9 @@ export default function RootLayout({
         <html lang="en">
             <head />
             <body>
-                <RecoilContext>{children}</RecoilContext>
+                <RecoilContext>
+                    <ThemeProvider>{children}</ThemeProvider>
+                </RecoilContext>
             </body>
         </html>
     );

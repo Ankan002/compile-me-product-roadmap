@@ -25,7 +25,8 @@
       "pages/*": ["./pages/*"],
       "components/*": ["./components/*"],
       "atoms/*": ["./atoms/*"],
-      "helpers/*": ["./helpers/*"]
+      "helpers/*": ["./helpers/*"],
+      "types/*": ["./types/*"]
     }
   },
   "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts"],
