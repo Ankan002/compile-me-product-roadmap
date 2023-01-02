@@ -6,6 +6,7 @@ import { useRecoilValue } from "recoil";
 import { themeAtom } from "atoms";
 import { Theme } from "types/theme";
 import { TimelineCard } from "components/elements";
+import { secondaryLight, secondaryDark } from "constants/colors";
 
 interface Props {
     features: Array<Feature>;
@@ -18,8 +19,7 @@ const Timeline = (props: Props) => {
 
     return (
         <VerticalTimeline
-            lineColor={`${currentTheme === "dark" ? "#F1F2F6" : "#10111A"}`}
-            
+            lineColor={`${currentTheme === "dark" ? secondaryLight : secondaryDark}`}
         >
             {features.map((feature) => (
                 <TimelineCard feature={feature} key={feature.id} />

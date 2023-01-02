@@ -1,0 +1,12 @@
+export const primaryDark = "#1C1B2B";
+export const secondaryDark = "#10111A";
+export const primaryLight = "#F4F6FA";
+export const secondaryLight = "#F1F2F6";
+export const primaryOrange = "#FC5830";
+export const lightGrey = "#B5BAC7";
+export const darkGrey = "#6B728E";
+export const white = "#FFFFFF";
+export const primaryYellow = "#F6BA3D";
+export const semiTransparent = "rgba(0, 0, 0, 0.6)";
+export const primaryGreen = "#08CD92";
+export const primaryRed = "#D61C4E";

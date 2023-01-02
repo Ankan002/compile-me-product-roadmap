@@ -5,6 +5,7 @@ import { VerticalTimelineElement } from "react-vertical-timeline-component";
 import { useRecoilValue } from "recoil";
 import { themeAtom } from "atoms";
 import { Theme } from "types/theme";
+import { darkGrey, lightGrey, primaryYellow, primaryGreen, primaryRed } from "constants/colors";
 
 interface Props {
     feature: Feature;
@@ -16,10 +17,10 @@ const TimelineCard = (props: Props) => {
     const currentTheme = useRecoilValue<Theme>(themeAtom);
 
     const colorSet = {
-        planned: "#FC5830",
-        ongoing: "#F6BA3D",
-        done: "#08CD92",
-        cancelled: "#D61C4E",
+        planned: `${currentTheme === "dark" ? lightGrey : darkGrey}`,
+        ongoing: primaryYellow,
+        done: primaryGreen,
+        cancelled: primaryRed,
     };
 
     return (
