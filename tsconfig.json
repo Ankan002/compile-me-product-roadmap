@@ -26,7 +26,8 @@
       "components/*": ["./components/*"],
       "atoms/*": ["./atoms/*"],
       "helpers/*": ["./helpers/*"],
-      "types/*": ["./types/*"]
+      "types/*": ["./types/*"],
+      "constants/*": ["./constants/*"],
     }
   },
   "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts"],
